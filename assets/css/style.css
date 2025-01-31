@@ -67,7 +67,7 @@ body {
       justify-content: center;
       align-items: center;
       margin-top: 50px;
-      margin-bottom: 100px;
+      margin-bottom: 250px;
 
       .fotoSobreMi {
         width: 250px;
@@ -75,6 +75,24 @@ body {
         border-radius: 50%;
         border: 2px solid #030303;
         object-fit: cover;
+      }
+    }
+
+    .redesSociales {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      top: 705px;
+      left: 675px;
+
+      a {
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
       }
     }
 
