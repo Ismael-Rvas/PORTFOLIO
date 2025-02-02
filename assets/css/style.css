@@ -96,29 +96,197 @@ body {
       }
     }
 
-    .contenedorTextoSobreMi {
+    .contenedor {
       width: 100%;
       height: 500px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background-color: #3770c5ab;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(55, 112, 197, 0.2) 30%,
+        rgba(55, 112, 197, 0.2) 80%,
+        rgba(255, 255, 255, 1) 100%
+      );
+
       margin-bottom: 100px;
 
       .tituloSobreMi {
-        color: #091629;
+        color: #15777a88;
         font-size: 2rem;
         font-weight: 400;
         text-align: center;
       }
 
-      .textoSobreMi {     
-        color: #091629;
+      .textoSobreMi {
+        color: #246e91;
         font-size: 1.2rem;
         font-weight: 300;
         text-align: center;
+      }
+    }
+  }
+
+  .lenguajes {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .lenguajesContenedor {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 100px;
+
+      .titulolenguajes {
+        color: #15777a88;
+        font-size: 2rem;
+      }
+
+      .textolenguajes {
+        color: #246e91;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .contenedorLenguajesImg {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+
+        img {
+          width: 100px;
+          height: 100px;
+          &:hover {
+            cursor: pointer;
+            transition: all 0.4s ease;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  .proyectos {
+    .contenedor {
+      width: 100%;
+      height: 500px;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(55, 112, 197, 0.2) 30%,
+        rgba(55, 112, 197, 0.2) 80%,
+        rgba(255, 255, 255, 1) 100%
+      );
+
+      margin-bottom: 100px;
+      .tituloProyectos {
+        color: #15777a88;
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .textoProyectos {
+        color: #246e91;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .cartasProyectos {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        .card {
+          position: relative;
+          width: 320px;
+          height: 320px;
+          margin: 20px;
+          border-radius: 15px;
+          overflow: hidden;
+
+          .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: 1s ease;
+
+            &:hover {
+              transform: rotateY(180deg);
+            }
+          }
+
+          .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .contenidoBox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #948a8ace;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+
+            div {
+              transform: translateZ(100px);
+              background: linear-gradient(45deg, #3498db, #2eccc4);
+              padding: 20px;
+              margin: 0 30px;
+              border-radius: 15px;
+
+              h2 {
+                color: #ffffff;
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+              }
+              p {
+                color: #ffffff;
+                font-size: 1rem;
+                margin-bottom: 20px;
+              }
+              a {
+                display: inline-block;
+                margin-right: 10px;
+                img {
+                  width: 30px;
+                  height: 30px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
